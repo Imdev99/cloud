@@ -68,6 +68,9 @@ app.post("/register", async (req,res)=>{
 })
 
 app.post("/login", async (req,res)=>{
+app.get("/", (req, res) => {
+  res.send("Server is running 🚀")
+})
   const {username,password}=req.body
   await db.read()
 
